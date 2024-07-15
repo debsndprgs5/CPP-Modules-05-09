@@ -323,13 +323,13 @@ void BitcoinExchange::MainFrame(const char *filename)
             validateNumber(value);
 
             std::map<string, string>::iterator it;
-            string prevDate = date;
+            string previousDate = date;
             it = _data.find(date);
 
             while (it == _data.end()) {
-                const string& currentDate = prevDate;
-                prevDate = prevDate(currentDate);
-                it = _data.find(prevDate);
+                const string& currentDate = previousDate;
+                previousDate = prevDate(currentDate);
+                it = _data.find(previousDate);
             }
 
             std::cout << date << " => " << value  << " = "

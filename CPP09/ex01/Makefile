@@ -1,5 +1,5 @@
-NAME		= MutantStack
-	
+NAME		= RPN
+
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -g
 RM			= rm -rf
@@ -7,10 +7,11 @@ RM			= rm -rf
 OBJDIR = .objFiles
 
 FILES		= 	main \
+				RPN \
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= MutantStack.hpp
+HEADER		= RPN.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
